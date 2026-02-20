@@ -12,8 +12,9 @@ export class Tooltip {
     this.card.beginFill(0x0b1624, 0.95).drawRoundedRect(0, 0, 340, 120, 14).endFill();
     this.card.lineStyle(2, UITheme.colors.cyanGlow, 0.8).drawRoundedRect(0, 0, 340, 120, 14);
     this.text.position.set(16, 16);
-    this.text.wordWrap = true;
-    this.text.wordWrapWidth = 308;
+    const style = this.text.style as PIXI.TextStyle;
+    style.wordWrap = true;
+    style.wordWrapWidth = 308;
 
     this.container.addChild(this.card, this.text);
     this.container.scale.set(0.95);
