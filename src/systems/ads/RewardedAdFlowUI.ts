@@ -16,8 +16,8 @@ export class RewardedAdFlowUI {
 
   constructor(private readonly adService: IAdService) {
     this.container.visible = false;
-    this.dim.beginFill(0x000000, 0.55).drawRect(0, 0, 1080, 1920).endFill();
-    this.dim.alpha = 0.85;
+    this.dim.beginFill(0x000000, 0.15).drawRect(0, 0, 1080, 1920).endFill();
+    this.dim.alpha = 1;
 
     this.card.beginFill(0x1f2f3f, 0.96).drawRoundedRect(0, 0, 760, 520, 26).endFill();
     this.card.lineStyle(3, 0xf4c542, 0.9).drawRoundedRect(0, 0, 760, 520, 26);

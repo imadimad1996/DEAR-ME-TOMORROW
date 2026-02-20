@@ -1,0 +1,26 @@
+{
+  "name": "Dear Me, Tomorrow",
+  "short_name": "DearTomorrow",
+  "description": "Merge game with emotional letters from your future self.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f4c5c",
+  "theme_color": "#0f4c5c",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/favicon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/app_icon_1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

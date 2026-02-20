@@ -5,6 +5,7 @@ export class Tooltip {
   public readonly container = new PIXI.Container();
   private readonly card = new PIXI.Graphics();
   private readonly text = new PIXI.Text('', UITheme.text.small);
+  private animFrame = 0;
 
   constructor() {
     this.container.visible = false;
@@ -23,11 +24,25 @@ export class Tooltip {
     this.text.text = message;
     this.container.position.set(x, y);
     this.container.visible = true;
-    this.container.alpha = 1;
-    this.container.scale.set(1);
+    this.container.alpha = 0;
+    this.container.scale.set(0.95);
+
+    const started = performance.now();
+    const duration = 120;
+    cancelAnimationFrame(this.animFrame);
+    const tick = () => {
+      const t = Math.min(1, (performance.now() - started) / duration);
+      this.container.alpha = t;
+      this.container.scale.set(0.95 + 0.05 * t);
+      if (t < 1) {
+        this.animFrame = requestAnimationFrame(tick);
+      }
+    };
+    tick();
   }
 
   public hide(): void {
+    cancelAnimationFrame(this.animFrame);
     this.container.visible = false;
   }
 }

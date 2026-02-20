@@ -1,0 +1,14 @@
+html,
+body,
+#app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 0%, #1e4250 0%, #0f1b26 60%);
+  overflow: hidden;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+canvas {
+  display: block;
+}

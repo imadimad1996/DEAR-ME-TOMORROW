@@ -36,7 +36,7 @@ export class RoomLighting {
     const tempShift = 1 + Math.cos(this.elapsed / 3200) * 0.03;
     this.container.alpha = 0.86 * flicker;
     this.ray.alpha = 0.07 + Math.sin(this.elapsed / 10000 * Math.PI * 2) * 0.03;
-    this.tintOverlay.tint = tempShift > 1 ? 0xfff3d1 : 0xf2ebff;
+    this.tintOverlay.alpha = tempShift > 1 ? 0.1 : 0.07;
 
     this.dusts.forEach((dust) => {
       dust.lifeMs -= deltaMs;

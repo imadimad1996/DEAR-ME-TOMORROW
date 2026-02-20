@@ -116,7 +116,14 @@ export class Board {
     return false;
   }
 
-  public spawnItem(chainId: ChainId, tier: number, cellX?: number, cellY?: number, isJoker = false): Item | null {
+  public spawnItem(
+    chainId: ChainId,
+    tier: number,
+    cellX?: number,
+    cellY?: number,
+    isJoker = false,
+    forcedUid?: string,
+  ): Item | null {
     const slot =
       cellX != null && cellY != null
         ? { x: cellX, y: cellY }
@@ -143,7 +150,7 @@ export class Board {
     }
 
     const item: Item = {
-      uid: this.nextUid(),
+      uid: forcedUid ?? this.nextUid(),
       chainId,
       tier,
       x: slot.x,
@@ -227,9 +234,15 @@ export class Board {
   public loadFromSave(items: BoardSaveItem[]): void {
     this.clearAll();
     items.forEach((entry) => {
-      const spawned = this.spawnItem(entry.chainId, entry.tier, entry.x, entry.y, entry.isJoker);
+      const spawned = this.spawnItem(
+        entry.chainId,
+        entry.tier,
+        entry.x,
+        entry.y,
+        entry.isJoker,
+        entry.uid,
+      );
       if (spawned) {
-        spawned.uid = entry.uid;
         spawned.echo = entry.echo;
         spawned.sprite.tint = entry.echo ? 0x9cecff : getTierData(spawned.chainId, spawned.tier).color;
       }
