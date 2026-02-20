@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MergeManor</string>
+    <string name="title_activity_main">MergeManor</string>
+    <string name="package_name">com.imad.merge.manor</string>
+    <string name="custom_url_scheme">com.imad.merge.manor</string>
+</resources>
