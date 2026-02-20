@@ -1,0 +1,7 @@
+{
+  "echoChance": [0.08, 0.1, 0.12],
+  "rewardDelay": [0.3, 0.5],
+  "ctaGlowIntensity": ["low", "med", "high"],
+  "starterPackPrice": [1.99, 2.99],
+  "energyRegenMinutes": [2.0, 1.8]
+}

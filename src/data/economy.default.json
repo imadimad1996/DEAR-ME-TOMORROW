@@ -1,0 +1,30 @@
+{
+  "board": {
+    "cols": 8,
+    "rows": 10,
+    "spawnEnergyCost": 1,
+    "initialScrapCount": 8
+  },
+  "currencies": {
+    "coins": 120,
+    "gems": 25,
+    "stars": 0
+  },
+  "energy": {
+    "max": 40,
+    "regenMinutesDefault": 2.0
+  },
+  "orders": {
+    "maxActive": 5
+  },
+  "mvpEnabledChains": ["wood", "culinary"],
+  "echo": {
+    "enabled": true,
+    "chanceDefault": 0.1
+  },
+  "boosters": {
+    "extra_energy": 2,
+    "merge_joker": 1,
+    "time_skip": 1
+  }
+}

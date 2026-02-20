@@ -1,0 +1,47 @@
+[
+  {
+    "id": "order_hall_shelf_fix",
+    "chainId": "wood",
+    "tier": 3,
+    "count": 2,
+    "rewardCoins": 40,
+    "rewardEnergy": 2,
+    "rewardBooster": 0
+  },
+  {
+    "id": "order_guest_snack",
+    "chainId": "culinary",
+    "tier": 3,
+    "count": 2,
+    "rewardCoins": 55,
+    "rewardEnergy": 1,
+    "rewardBooster": 0
+  },
+  {
+    "id": "order_polish_banister",
+    "chainId": "wood",
+    "tier": 4,
+    "count": 1,
+    "rewardCoins": 80,
+    "rewardEnergy": 2,
+    "rewardBooster": 1
+  },
+  {
+    "id": "order_teatime_platter",
+    "chainId": "culinary",
+    "tier": 4,
+    "count": 1,
+    "rewardCoins": 90,
+    "rewardEnergy": 2,
+    "rewardBooster": 1
+  },
+  {
+    "id": "order_main_hall_showpiece",
+    "chainId": "wood",
+    "tier": 5,
+    "count": 1,
+    "rewardCoins": 120,
+    "rewardEnergy": 3,
+    "rewardBooster": 1
+  }
+]

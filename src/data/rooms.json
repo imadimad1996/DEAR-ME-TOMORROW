@@ -1,0 +1,98 @@
+[
+  {
+    "id": "entrance_hall",
+    "name": "Entrance Hall",
+    "styles": {
+      "classic_before": "/assets/rooms/entrance_hall/classic_before.png",
+      "classic_after": "/assets/rooms/entrance_hall/classic_after.png",
+      "modern_before": "/assets/rooms/entrance_hall/modern_before.png",
+      "modern_after": "/assets/rooms/entrance_hall/modern_after.png",
+      "future_before": "/assets/rooms/entrance_hall/future_before.png",
+      "future_after": "/assets/rooms/entrance_hall/future_after.png"
+    }
+  },
+  {
+    "id": "kitchen",
+    "name": "Kitchen",
+    "styles": {
+      "classic_before": "/assets/rooms/kitchen/classic_before.png",
+      "classic_after": "/assets/rooms/kitchen/classic_after.png",
+      "modern_before": "/assets/rooms/kitchen/modern_before.png",
+      "modern_after": "/assets/rooms/kitchen/modern_after.png",
+      "future_before": "/assets/rooms/kitchen/future_before.png",
+      "future_after": "/assets/rooms/kitchen/future_after.png"
+    }
+  },
+  {
+    "id": "sunroom_garden",
+    "name": "Sunroom & Garden",
+    "styles": {
+      "classic_before": "/assets/rooms/sunroom_garden/classic_before.png",
+      "classic_after": "/assets/rooms/sunroom_garden/classic_after.png",
+      "modern_before": "/assets/rooms/sunroom_garden/modern_before.png",
+      "modern_after": "/assets/rooms/sunroom_garden/modern_after.png",
+      "future_before": "/assets/rooms/sunroom_garden/future_before.png",
+      "future_after": "/assets/rooms/sunroom_garden/future_after.png"
+    }
+  },
+  {
+    "id": "library_study",
+    "name": "Library & Study",
+    "styles": {
+      "classic_before": "/assets/rooms/library_study/classic_before.png",
+      "classic_after": "/assets/rooms/library_study/classic_after.png",
+      "modern_before": "/assets/rooms/library_study/modern_before.png",
+      "modern_after": "/assets/rooms/library_study/modern_after.png",
+      "future_before": "/assets/rooms/library_study/future_before.png",
+      "future_after": "/assets/rooms/library_study/future_after.png"
+    }
+  },
+  {
+    "id": "lighthouse_tower",
+    "name": "Lighthouse Tower",
+    "styles": {
+      "classic_before": "/assets/rooms/lighthouse_tower/classic_before.png",
+      "classic_after": "/assets/rooms/lighthouse_tower/classic_after.png",
+      "modern_before": "/assets/rooms/lighthouse_tower/modern_before.png",
+      "modern_after": "/assets/rooms/lighthouse_tower/modern_after.png",
+      "future_before": "/assets/rooms/lighthouse_tower/future_before.png",
+      "future_after": "/assets/rooms/lighthouse_tower/future_after.png"
+    }
+  },
+  {
+    "id": "guest_bedrooms",
+    "name": "Guest Bedrooms",
+    "styles": {
+      "classic_before": "/assets/rooms/guest_bedrooms/classic_before.png",
+      "classic_after": "/assets/rooms/guest_bedrooms/classic_after.png",
+      "modern_before": "/assets/rooms/guest_bedrooms/modern_before.png",
+      "modern_after": "/assets/rooms/guest_bedrooms/modern_after.png",
+      "future_before": "/assets/rooms/guest_bedrooms/future_before.png",
+      "future_after": "/assets/rooms/guest_bedrooms/future_after.png"
+    }
+  },
+  {
+    "id": "observatory",
+    "name": "Observatory",
+    "styles": {
+      "classic_before": "/assets/rooms/observatory/classic_before.png",
+      "classic_after": "/assets/rooms/observatory/classic_after.png",
+      "modern_before": "/assets/rooms/observatory/modern_before.png",
+      "modern_after": "/assets/rooms/observatory/modern_after.png",
+      "future_before": "/assets/rooms/observatory/future_before.png",
+      "future_after": "/assets/rooms/observatory/future_after.png"
+    }
+  },
+  {
+    "id": "secret_basement_lab",
+    "name": "Secret Basement Lab",
+    "styles": {
+      "classic_before": "/assets/rooms/secret_basement_lab/classic_before.png",
+      "classic_after": "/assets/rooms/secret_basement_lab/classic_after.png",
+      "modern_before": "/assets/rooms/secret_basement_lab/modern_before.png",
+      "modern_after": "/assets/rooms/secret_basement_lab/modern_after.png",
+      "future_before": "/assets/rooms/secret_basement_lab/future_before.png",
+      "future_after": "/assets/rooms/secret_basement_lab/future_after.png"
+    }
+  }
+]
