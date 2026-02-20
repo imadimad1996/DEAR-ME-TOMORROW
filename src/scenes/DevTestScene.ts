@@ -82,17 +82,23 @@ export class DevTestScene implements IScene {
       this.ctx.sceneManager.switchTo('merge-board');
     }, 420, 64);
 
-    this.makeButton('Simulate Rewarded Ad', 330, 920, () => {
+    this.makeButton('Trigger Echo Cinematic Stub', 300, 920, () => {
+      const merge = this.ctx.sceneManager.getScene<any>('merge-board');
+      merge?.triggerEchoChoiceCinematicStub?.();
+      this.ctx.sceneManager.switchTo('merge-board');
+    }, 480, 64);
+
+    this.makeButton('Simulate Rewarded Ad', 330, 1000, () => {
       const merge = this.ctx.sceneManager.getScene<any>('merge-board');
       merge?.simulateRewardedAd?.();
       this.ctx.sceneManager.switchTo('merge-board');
     }, 420, 64);
 
-    this.makeButton('Export Analytics JSON', 330, 1000, () => {
+    this.makeButton('Export Analytics JSON', 330, 1080, () => {
       this.ctx.analytics.downloadJSON('dear-me-tomorrow-analytics.json');
     }, 420, 64);
 
-    this.makeButton('Open Room View Scene', 330, 1080, () => {
+    this.makeButton('Open Room View Scene', 330, 1160, () => {
       this.ctx.sceneManager.switchTo('room-entrance-hall');
     }, 420, 64);
   }

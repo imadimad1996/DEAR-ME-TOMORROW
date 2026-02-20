@@ -288,6 +288,12 @@ export class Board {
     this.dragState = null;
 
     const local = this.container.toLocal(event.global, undefined, this.tmpPoint);
+    const magnetCandidate = this.findMagnetCandidateNear(state.item, local.x, local.y, 20);
+    if (magnetCandidate) {
+      this.executeMerge(state.item, magnetCandidate, magnetCandidate.x, magnetCandidate.y, true);
+      return;
+    }
+
     const tx = Math.floor(local.x / this.cellSize);
     const ty = Math.floor(local.y / this.cellSize);
 
@@ -388,11 +394,34 @@ export class Board {
   }
 
   private tryMagnetMerge(item: Item): void {
-    const candidate = findMagnetCandidate(this.getItems(), item, this.cellSize + 20);
+    const candidate = findMagnetCandidate(this.getItems(), item, 20);
     if (!candidate) {
       return;
     }
     this.executeMerge(item, candidate, candidate.x, candidate.y, true);
+  }
+
+  private findMagnetCandidateNear(
+    source: Item,
+    localX: number,
+    localY: number,
+    thresholdPx: number,
+  ): Item | null {
+    let best: Item | null = null;
+    let bestDistance = Number.POSITIVE_INFINITY;
+    this.items.forEach((item) => {
+      if (!canMerge(source, item)) {
+        return;
+      }
+      const dx = item.sprite.x - localX;
+      const dy = item.sprite.y - localY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist <= thresholdPx && dist < bestDistance) {
+        best = item;
+        bestDistance = dist;
+      }
+    });
+    return best;
   }
 
   private snapItem(item: Item, x: number, y: number): void {

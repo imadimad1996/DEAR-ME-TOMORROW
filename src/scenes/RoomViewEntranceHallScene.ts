@@ -50,6 +50,8 @@ export class RoomViewEntranceHallScene implements IScene {
     this.parallax.addLayer('/assets/rooms/entrance_hall/classic_before.png', 0.2, 1080, 1920);
     this.parallax.addLayer('/assets/rooms/entrance_hall/modern_before.png', 0.4, 1080, 1920);
     this.parallax.addLayer('/assets/rooms/entrance_hall/future_before.png', 0.7, 1080, 1920);
+    this.parallax.addLayer('/assets/rooms/entrance_hall/classic_after.png', 1.0, 1080, 1920);
+    this.parallax.addLayer('/assets/rooms/entrance_hall/future_after.png', 1.2, 1080, 1920);
 
     this.container.eventMode = 'static';
     this.container.hitArea = new PIXI.Rectangle(0, 0, 1080, 1920);
