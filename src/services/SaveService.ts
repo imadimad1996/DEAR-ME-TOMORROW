@@ -14,6 +14,7 @@ export class SaveService {
           return parsed;
         }
       } catch {
+        localStorage.removeItem(SAVE_KEY);
         return null;
       }
     }
@@ -28,6 +29,7 @@ export class SaveService {
           return migrated;
         }
       } catch {
+        localStorage.removeItem(LEGACY_KEY);
         return null;
       }
     }
@@ -81,12 +83,13 @@ export class SaveService {
   }
 
   private migrateV1ToV2(v1: SaveDataV1, config: RemoteConfig): SaveDataV2 {
+    const completed = v1.episode_progress.completedStepIds;
     return {
       ...v1,
       version: 2,
       episode_progress: {
-        completedStepIds: v1.episode_progress.completedStepIds,
-        activeEpisodeStepId: v1.episode_progress.completedStepIds.at(-1),
+        completedStepIds: completed,
+        activeEpisodeStepId: completed.length > 0 ? completed[completed.length - 1] : undefined,
       },
       remote_config_cache: config,
     };

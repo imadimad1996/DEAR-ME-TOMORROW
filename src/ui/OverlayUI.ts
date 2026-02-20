@@ -365,7 +365,7 @@ export class OverlayUI {
 
     this.inboxReader.innerHTML = `
       <h4>${selected.title}</h4>
-      <div class="parchment">${selected.body.replaceAll('\n', '<br/>')}</div>
+      <div class="parchment">${selected.body.split('\n').join('<br/>')}</div>
     `;
 
     const fav = document.createElement('button');

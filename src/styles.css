@@ -132,6 +132,33 @@ button:hover {
   display: none !important;
 }
 
+.fatal-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.fatal-card {
+  width: min(560px, 100%);
+  padding: 24px;
+  border: 1px solid var(--panel-line);
+  border-radius: 14px;
+  background: rgba(8, 14, 22, 0.94);
+}
+
+.fatal-card h2 {
+  margin: 0 0 8px;
+  font-family: 'Alegreya', serif;
+}
+
+.fatal-card p {
+  margin: 0 0 14px;
+  color: var(--text-muted);
+}
+
 .order-slots {
   display: grid;
   grid-template-columns: 1fr;

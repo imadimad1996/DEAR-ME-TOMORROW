@@ -70,6 +70,7 @@ export class GameApp {
   private lastAutoSaveAt = Date.now();
   private unbindSession: (() => void) | null = null;
   private unbindVisibility: (() => void) | null = null;
+  private recoveredFromRuntimeError = false;
 
   constructor(private readonly root: HTMLElement) {
     this.shell = document.createElement('div');
@@ -174,21 +175,25 @@ export class GameApp {
     });
 
     this.simulation.subscribe((state) => {
-      const branch = this.simulation.getCurrentBranchMoment();
-      const debugItemIds = this.content.itemChains.flatMap((chain) => chain.tiers.map((tier) => tier.id));
-      this.ui.update({
-        state,
-        orderDefinitions: this.simulation.getOrderDefinitionsForActive(),
-        branchMoment: branch,
-        analyticsEvents: this.simulation.getAnalyticsEvents(),
-        debugItemIds,
-        iapSkus: this.content.iapCatalog.map((sku) => ({
-          id: sku.id,
-          displayName: sku.displayName,
-          priceText: sku.priceText,
-        })),
-      });
-      this.updateTooltip(state);
+      try {
+        const branch = this.simulation.getCurrentBranchMoment();
+        const debugItemIds = this.content.itemChains.flatMap((chain) => chain.tiers.map((tier) => tier.id));
+        this.ui.update({
+          state,
+          orderDefinitions: this.simulation.getOrderDefinitionsForActive(),
+          branchMoment: branch,
+          analyticsEvents: this.simulation.getAnalyticsEvents(),
+          debugItemIds,
+          iapSkus: this.content.iapCatalog.map((sku) => ({
+            id: sku.id,
+            displayName: sku.displayName,
+            priceText: sku.priceText,
+          })),
+        });
+        this.updateTooltip(state);
+      } catch (error) {
+        this.recoverFromRuntimeError('state-update', error);
+      }
     });
 
     this.unbindSession = this.analytics.attachSessionLifecycle(() => this.simulation.getState());
@@ -220,42 +225,46 @@ export class GameApp {
   }
 
   private frame(): void {
-    const now = Date.now();
-    this.simulation.tick(now);
+    try {
+      const now = Date.now();
+      this.simulation.tick(now);
 
-    if (now - this.lastAutoSaveAt >= this.simulation.getState().config.autosaveSeconds * 1000) {
-      this.simulation.saveNow();
-      this.lastAutoSaveAt = now;
-    }
-
-    let dragRender: { itemId: string; x: number; y: number } | undefined;
-
-    if (this.activeDrag && this.activeDrag.hasDragged) {
-      dragRender = {
-        itemId: this.activeDrag.itemUid,
-        x: this.activeDrag.currentX,
-        y: this.activeDrag.currentY,
-      };
-    } else if (this.returnAnimation) {
-      const t = Math.min(1, (now - this.returnAnimation.startAt) / this.returnAnimation.durationMs);
-      const eased = easeOutCubic(t);
-      const x = this.returnAnimation.fromX + (this.returnAnimation.toX - this.returnAnimation.fromX) * eased;
-      const y = this.returnAnimation.fromY + (this.returnAnimation.toY - this.returnAnimation.fromY) * eased;
-      dragRender = {
-        itemId: this.returnAnimation.itemUid,
-        x,
-        y,
-      };
-      if (t >= 1) {
-        this.returnAnimation = null;
+      if (now - this.lastAutoSaveAt >= this.simulation.getState().config.autosaveSeconds * 1000) {
+        this.simulation.saveNow();
+        this.lastAutoSaveAt = now;
       }
-    }
 
-    this.renderer.render(this.simulation.getState(), {
-      drag: dragRender,
-      highlight: this.highlightTarget,
-      readyGenerators: this.simulation.getReadyGeneratorIds(now),
-    });
+      let dragRender: { itemId: string; x: number; y: number } | undefined;
+
+      if (this.activeDrag && this.activeDrag.hasDragged) {
+        dragRender = {
+          itemId: this.activeDrag.itemUid,
+          x: this.activeDrag.currentX,
+          y: this.activeDrag.currentY,
+        };
+      } else if (this.returnAnimation) {
+        const t = Math.min(1, (now - this.returnAnimation.startAt) / this.returnAnimation.durationMs);
+        const eased = easeOutCubic(t);
+        const x = this.returnAnimation.fromX + (this.returnAnimation.toX - this.returnAnimation.fromX) * eased;
+        const y = this.returnAnimation.fromY + (this.returnAnimation.toY - this.returnAnimation.fromY) * eased;
+        dragRender = {
+          itemId: this.returnAnimation.itemUid,
+          x,
+          y,
+        };
+        if (t >= 1) {
+          this.returnAnimation = null;
+        }
+      }
+
+      this.renderer.render(this.simulation.getState(), {
+        drag: dragRender,
+        highlight: this.highlightTarget,
+        readyGenerators: this.simulation.getReadyGeneratorIds(now),
+      });
+    } catch (error) {
+      this.recoverFromRuntimeError('frame', error);
+    }
   }
 
   private onPointerDown(pointer: PointerData): void {
@@ -386,6 +395,15 @@ export class GameApp {
     this.tooltip.textContent = text;
     this.tooltip.style.left = `${state.ui.tooltipPosition.x + 14}px`;
     this.tooltip.style.top = `${state.ui.tooltipPosition.y + 14}px`;
+  }
+
+  private recoverFromRuntimeError(source: 'state-update' | 'frame', error: unknown): void {
+    console.error(`[game] Runtime error during ${source}`, error);
+    if (this.recoveredFromRuntimeError) {
+      return;
+    }
+    this.recoveredFromRuntimeError = true;
+    this.simulation.resetSaveAndState();
   }
 
   private clearHoldTimer(): void {

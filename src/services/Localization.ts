@@ -9,7 +9,7 @@ export class Localization {
       return template;
     }
     return Object.entries(params).reduce((text, [name, value]) => {
-      return text.replaceAll(`{${name}}`, String(value ?? ''));
+      return text.split(`{${name}}`).join(String(value ?? ''));
     }, template);
   }
 }

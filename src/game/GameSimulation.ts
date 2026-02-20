@@ -108,7 +108,18 @@ export class GameSimulation {
 
     const baseConfig = this.configService.get();
     const saved = this.saveService.load(baseConfig);
-    const state = saved ? this.stateFromSave(saved) : this.createDefaultState(baseConfig);
+    let state: GameState;
+    if (!saved) {
+      state = this.createDefaultState(baseConfig);
+    } else {
+      try {
+        state = this.stateFromSave(saved);
+      } catch (error) {
+        console.warn('[save] Invalid or incompatible save detected. Resetting progress.', error);
+        this.saveService.clear();
+        state = this.createDefaultState(baseConfig);
+      }
+    }
 
     this.rng = new DeterministicRng(state.seed);
     this.store = new Store(state);
@@ -911,7 +922,9 @@ export class GameSimulation {
 
   public getOrderDefinitionsForActive(): OrderDefinition[] {
     const state = this.store.getState();
-    return state.ordersActive.map((instance) => this.content.getOrder(instance.definitionId));
+    return state.ordersActive
+      .map((instance) => this.content.orders.find((entry) => entry.id === instance.definitionId))
+      .filter((entry): entry is OrderDefinition => Boolean(entry));
   }
 
   public getAnalyticsEvents() {
@@ -2062,7 +2075,7 @@ export class GameSimulation {
     if (!choice) {
       return null;
     }
-    return this.content.getBranchMoment(choice.branchMomentId);
+    return this.content.branchMoments.find((entry) => entry.id === choice.branchMomentId) ?? null;
   }
 
   public getInventoryItemWarningStage(item: ItemInstance): '24h' | '6h' | '1h' | null {
