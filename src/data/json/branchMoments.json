@@ -1,0 +1,59 @@
+[
+  {
+    "id": "kitchen_modern_vintage",
+    "triggerOrderId": "install_kitchen_lighting",
+    "roomId": "kitchen",
+    "optionA": {
+      "id": "kitchen_modern",
+      "title": "Modern Kitchen",
+      "description": "Glass pendants, steel accents, bright task lighting.",
+      "decorFlag": "chose_modern",
+      "letterId": "letter_kitchen_modern"
+    },
+    "optionB": {
+      "id": "kitchen_vintage",
+      "title": "Vintage Kitchen",
+      "description": "Warm brass lights, soft wood trim, nostalgic glow.",
+      "decorFlag": "chose_vintage",
+      "letterId": "letter_kitchen_vintage"
+    }
+  },
+  {
+    "id": "lighthouse_beacon_art_studio",
+    "triggerOrderId": "restore_tower_top",
+    "roomId": "sunroom_garden",
+    "optionA": {
+      "id": "beacon",
+      "title": "Beacon Tower",
+      "description": "Restore the guiding light to protect the harbor.",
+      "decorFlag": "chose_beacon",
+      "letterId": "letter_beacon"
+    },
+    "optionB": {
+      "id": "art_studio",
+      "title": "Art Studio",
+      "description": "Turn the tower into a painter's loft of memory.",
+      "decorFlag": "chose_art_studio",
+      "letterId": "letter_art_studio"
+    }
+  },
+  {
+    "id": "basement_hide_showcase",
+    "triggerOrderId": "assemble_time_core",
+    "roomId": "library_study",
+    "optionA": {
+      "id": "hide",
+      "title": "Secret Hideaway",
+      "description": "Conceal the Time Core in a secure hidden alcove.",
+      "decorFlag": "chose_hide",
+      "letterId": "letter_hideaway"
+    },
+    "optionB": {
+      "id": "showcase",
+      "title": "Glass Showcase",
+      "description": "Display the Time Core as a symbol of trust.",
+      "decorFlag": "chose_showcase",
+      "letterId": "letter_showcase"
+    }
+  }
+]

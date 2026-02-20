@@ -1,0 +1,114 @@
+[
+  {
+    "id": "letter_kitchen_glow",
+    "titleKey": "letter.kitchen_glow.title",
+    "bodyKey": "letter.kitchen_glow.body",
+    "mood": "hopeful",
+    "trigger": "order:install_kitchen_lighting"
+  },
+  {
+    "id": "letter_tower_wind",
+    "titleKey": "letter.tower_wind.title",
+    "bodyKey": "letter.tower_wind.body",
+    "mood": "mystery",
+    "trigger": "order:restore_tower_top"
+  },
+  {
+    "id": "letter_core_whisper",
+    "titleKey": "letter.core_whisper.title",
+    "bodyKey": "letter.core_whisper.body",
+    "mood": "urgent",
+    "trigger": "order:assemble_time_core"
+  },
+  {
+    "id": "letter_guest_warmth",
+    "titleKey": "letter.guest_warmth.title",
+    "bodyKey": "letter.guest_warmth.body",
+    "mood": "warm",
+    "trigger": "order:garden_tea_for_guest"
+  },
+  {
+    "id": "letter_brunch_clock",
+    "titleKey": "letter.brunch_clock.title",
+    "bodyKey": "letter.brunch_clock.body",
+    "mood": "reflective",
+    "trigger": "order:sunroom_brunch"
+  },
+  {
+    "id": "letter_library_echo",
+    "titleKey": "letter.library_echo.title",
+    "bodyKey": "letter.library_echo.body",
+    "mood": "mystery",
+    "trigger": "order:choose_library_desk"
+  },
+  {
+    "id": "letter_clock_tick",
+    "titleKey": "letter.clock_tick.title",
+    "bodyKey": "letter.clock_tick.body",
+    "mood": "hopeful",
+    "trigger": "order:repair_entry_clock"
+  },
+  {
+    "id": "letter_dust_map",
+    "titleKey": "letter.dust_map.title",
+    "bodyKey": "letter.dust_map.body",
+    "mood": "mystery",
+    "trigger": "order:mystery_note_dust"
+  },
+  {
+    "id": "letter_twilight_snack",
+    "titleKey": "letter.twilight_snack.title",
+    "bodyKey": "letter.twilight_snack.body",
+    "mood": "warm",
+    "trigger": "order:guest_evening_snack"
+  },
+  {
+    "id": "letter_sunroom_light",
+    "titleKey": "letter.sunroom_light.title",
+    "bodyKey": "letter.sunroom_light.body",
+    "mood": "reflective",
+    "trigger": "order:sunroom_light_study"
+  },
+  {
+    "id": "letter_kitchen_modern",
+    "titleKey": "letter.kitchen_modern.title",
+    "bodyKey": "letter.kitchen_modern.body",
+    "mood": "hopeful",
+    "trigger": "echo:kitchen_modern_vintage:optionA"
+  },
+  {
+    "id": "letter_kitchen_vintage",
+    "titleKey": "letter.kitchen_vintage.title",
+    "bodyKey": "letter.kitchen_vintage.body",
+    "mood": "warm",
+    "trigger": "echo:kitchen_modern_vintage:optionB"
+  },
+  {
+    "id": "letter_beacon",
+    "titleKey": "letter.beacon.title",
+    "bodyKey": "letter.beacon.body",
+    "mood": "urgent",
+    "trigger": "echo:lighthouse_beacon_art_studio:optionA"
+  },
+  {
+    "id": "letter_art_studio",
+    "titleKey": "letter.art_studio.title",
+    "bodyKey": "letter.art_studio.body",
+    "mood": "reflective",
+    "trigger": "echo:lighthouse_beacon_art_studio:optionB"
+  },
+  {
+    "id": "letter_hideaway",
+    "titleKey": "letter.hideaway.title",
+    "bodyKey": "letter.hideaway.body",
+    "mood": "mystery",
+    "trigger": "echo:basement_hide_showcase:optionA"
+  },
+  {
+    "id": "letter_showcase",
+    "titleKey": "letter.showcase.title",
+    "bodyKey": "letter.showcase.body",
+    "mood": "hopeful",
+    "trigger": "echo:basement_hide_showcase:optionB"
+  }
+]

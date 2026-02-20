@@ -1,0 +1,38 @@
+[
+  {
+    "id": "entrance_hall",
+    "nameKey": "room.entrance_hall",
+    "unlockedAtEpisode": 1,
+    "styles": [
+      { "id": "classic_welcome", "nameKey": "style.classic_welcome", "color": "#d9c8aa" },
+      { "id": "clean_modern", "nameKey": "style.clean_modern", "color": "#b6cedb" }
+    ]
+  },
+  {
+    "id": "kitchen",
+    "nameKey": "room.kitchen",
+    "unlockedAtEpisode": 3,
+    "styles": [
+      { "id": "kitchen_modern", "nameKey": "style.kitchen_modern", "color": "#b8c8d6" },
+      { "id": "kitchen_vintage", "nameKey": "style.kitchen_vintage", "color": "#d7b79f" }
+    ]
+  },
+  {
+    "id": "sunroom_garden",
+    "nameKey": "room.sunroom_garden",
+    "unlockedAtEpisode": 2,
+    "styles": [
+      { "id": "sunroom_botanical", "nameKey": "style.sunroom_botanical", "color": "#bdd9ae" },
+      { "id": "sunroom_minimal", "nameKey": "style.sunroom_minimal", "color": "#d7e5c6" }
+    ]
+  },
+  {
+    "id": "library_study",
+    "nameKey": "room.library_study",
+    "unlockedAtEpisode": 2,
+    "styles": [
+      { "id": "library_oak", "nameKey": "style.library_oak", "color": "#b69176" },
+      { "id": "library_midcentury", "nameKey": "style.library_midcentury", "color": "#7f9a88" }
+    ]
+  }
+]

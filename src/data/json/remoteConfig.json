@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "features": {
+    "matchMiniModeEnabled": false,
+    "eventBoostEnabled": false,
+    "vipBonusEnabled": false
+  },
+  "energy": {
+    "max": 100,
+    "regenSeconds": 120,
+    "offlineRegenCap": 50,
+    "generatorSpawnCost": 1,
+    "miniModeEntryCost": 5,
+    "rvReward": 10,
+    "rvCooldownSeconds": 1200,
+    "rvDailyCap": 5
+  },
+  "echo": {
+    "baseChance": 0.1,
+    "earlyGameChance": 0.15,
+    "earlyGameLevelCap": 10,
+    "newRoomBoost": 0.1,
+    "streakPerFiveMerges": 0.02,
+    "streakMaxBonus": 0.1,
+    "eventBoost": 0.05,
+    "vipBoost": 0.05,
+    "pityThreshold": 15,
+    "maxActiveEchoes": 3,
+    "echoLifetimeHours": 24,
+    "choiceGraceSeconds": 30,
+    "pendingQueueMax": 3
+  },
+  "inventory": {
+    "baseSlots": 15,
+    "maxSlots": 50,
+    "expiryHours": 72
+  },
+  "autosaveSeconds": 30
+}

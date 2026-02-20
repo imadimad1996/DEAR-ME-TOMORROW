@@ -1,0 +1,62 @@
+[
+  {
+    "id": "woodworking",
+    "nameKey": "chain.woodworking",
+    "icon": "🪵",
+    "tiers": [
+      { "id": "wood_chip", "tier": 1, "nameKey": "item.wood_chip", "color": "#b97a56", "shape": "square", "sellValue": 1, "sourceGenerators": ["toolbox"] },
+      { "id": "wood_plank", "tier": 2, "nameKey": "item.wood_plank", "color": "#c28c63", "shape": "square", "sellValue": 3, "sourceGenerators": ["toolbox"] },
+      { "id": "wood_frame", "tier": 3, "nameKey": "item.wood_frame", "color": "#d29f77", "shape": "square", "sellValue": 8, "sourceGenerators": ["toolbox"] },
+      { "id": "wood_chair", "tier": 4, "nameKey": "item.wood_chair", "color": "#c86b3a", "shape": "square", "sellValue": 20, "sourceGenerators": ["toolbox"] },
+      { "id": "wood_cabinet", "tier": 5, "nameKey": "item.wood_cabinet", "color": "#b45f2a", "shape": "square", "sellValue": 50, "sourceGenerators": ["toolbox"] },
+      { "id": "wood_grand_table", "tier": 6, "nameKey": "item.wood_grand_table", "color": "#8f4f22", "shape": "square", "sellValue": 120, "sourceGenerators": ["toolbox"] },
+      { "id": "wood_masterwork", "tier": 7, "nameKey": "item.wood_masterwork", "color": "#72401e", "shape": "square", "sellValue": 300, "sourceGenerators": ["toolbox"] },
+      { "id": "wood_legacy", "tier": 8, "nameKey": "item.wood_legacy", "color": "#50301a", "shape": "square", "sellValue": 800, "sourceGenerators": ["toolbox"] }
+    ]
+  },
+  {
+    "id": "oceanic",
+    "nameKey": "chain.oceanic",
+    "icon": "🌊",
+    "tiers": [
+      { "id": "shell_fragment", "tier": 1, "nameKey": "item.shell_fragment", "color": "#6db5d7", "shape": "circle", "sellValue": 1, "sourceGenerators": ["pantry"] },
+      { "id": "sea_shell", "tier": 2, "nameKey": "item.sea_shell", "color": "#64c8e8", "shape": "circle", "sellValue": 3, "sourceGenerators": ["pantry"] },
+      { "id": "sea_star", "tier": 3, "nameKey": "item.sea_star", "color": "#59d1f0", "shape": "circle", "sellValue": 8, "sourceGenerators": ["pantry"] },
+      { "id": "coral_piece", "tier": 4, "nameKey": "item.coral_piece", "color": "#42c2dc", "shape": "circle", "sellValue": 20, "sourceGenerators": ["pantry"] },
+      { "id": "pearl_cluster", "tier": 5, "nameKey": "item.pearl_cluster", "color": "#67d8ff", "shape": "circle", "sellValue": 50, "sourceGenerators": ["pantry"] },
+      { "id": "tide_relic", "tier": 6, "nameKey": "item.tide_relic", "color": "#38a9c8", "shape": "circle", "sellValue": 120, "sourceGenerators": ["pantry"] },
+      { "id": "beacon_core", "tier": 7, "nameKey": "item.beacon_core", "color": "#2a8daa", "shape": "circle", "sellValue": 300, "sourceGenerators": ["pantry"] },
+      { "id": "abyss_artifact", "tier": 8, "nameKey": "item.abyss_artifact", "color": "#1d6f86", "shape": "circle", "sellValue": 800, "sourceGenerators": ["pantry"] }
+    ]
+  },
+  {
+    "id": "culinary",
+    "nameKey": "chain.culinary",
+    "icon": "🍳",
+    "tiers": [
+      { "id": "herb_sprig", "tier": 1, "nameKey": "item.herb_sprig", "color": "#9fd27b", "shape": "diamond", "sellValue": 1, "sourceGenerators": ["pantry"] },
+      { "id": "spice_mix", "tier": 2, "nameKey": "item.spice_mix", "color": "#91c76a", "shape": "diamond", "sellValue": 3, "sourceGenerators": ["pantry"] },
+      { "id": "prep_platter", "tier": 3, "nameKey": "item.prep_platter", "color": "#7db45a", "shape": "diamond", "sellValue": 8, "sourceGenerators": ["pantry"] },
+      { "id": "family_meal", "tier": 4, "nameKey": "item.family_meal", "color": "#70a64f", "shape": "diamond", "sellValue": 20, "sourceGenerators": ["pantry"] },
+      { "id": "banquet_tray", "tier": 5, "nameKey": "item.banquet_tray", "color": "#5f9341", "shape": "diamond", "sellValue": 50, "sourceGenerators": ["pantry"] },
+      { "id": "chef_masterpiece", "tier": 6, "nameKey": "item.chef_masterpiece", "color": "#4e7f34", "shape": "diamond", "sellValue": 120, "sourceGenerators": ["pantry"] },
+      { "id": "festival_feast", "tier": 7, "nameKey": "item.festival_feast", "color": "#416a2c", "shape": "diamond", "sellValue": 300, "sourceGenerators": ["pantry"] },
+      { "id": "eternal_recipe", "tier": 8, "nameKey": "item.eternal_recipe", "color": "#345623", "shape": "diamond", "sellValue": 800, "sourceGenerators": ["pantry"] }
+    ]
+  },
+  {
+    "id": "tech",
+    "nameKey": "chain.tech",
+    "icon": "⚙️",
+    "tiers": [
+      { "id": "copper_wire", "tier": 1, "nameKey": "item.copper_wire", "color": "#f2b468", "shape": "hex", "sellValue": 1, "sourceGenerators": ["toolbox"] },
+      { "id": "circuit_node", "tier": 2, "nameKey": "item.circuit_node", "color": "#f0a650", "shape": "hex", "sellValue": 3, "sourceGenerators": ["toolbox"] },
+      { "id": "signal_board", "tier": 3, "nameKey": "item.signal_board", "color": "#eb9640", "shape": "hex", "sellValue": 8, "sourceGenerators": ["toolbox"] },
+      { "id": "relay_module", "tier": 4, "nameKey": "item.relay_module", "color": "#de8635", "shape": "hex", "sellValue": 20, "sourceGenerators": ["toolbox"] },
+      { "id": "quantum_node", "tier": 5, "nameKey": "item.quantum_node", "color": "#cf7328", "shape": "hex", "sellValue": 50, "sourceGenerators": ["toolbox"] },
+      { "id": "time_lens", "tier": 6, "nameKey": "item.time_lens", "color": "#b46220", "shape": "hex", "sellValue": 120, "sourceGenerators": ["toolbox"] },
+      { "id": "chrono_core", "tier": 7, "nameKey": "item.chrono_core", "color": "#954f1b", "shape": "hex", "sellValue": 300, "sourceGenerators": ["toolbox"] },
+      { "id": "tomorrow_engine", "tier": 8, "nameKey": "item.tomorrow_engine", "color": "#763f16", "shape": "hex", "sellValue": 800, "sourceGenerators": ["toolbox"] }
+    ]
+  }
+]

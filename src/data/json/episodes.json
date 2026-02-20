@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "nameKey": "episode.1",
+    "steps": [
+      { "id": "e1_step1", "descriptionKey": "onboarding.e1.step1", "requiredAction": "spawn_from_generator" },
+      { "id": "e1_step2", "descriptionKey": "onboarding.e1.step2", "requiredAction": "first_merge" },
+      { "id": "e1_step3", "descriptionKey": "onboarding.e1.step3", "requiredAction": "complete_first_order" }
+    ]
+  },
+  {
+    "id": 2,
+    "nameKey": "episode.2",
+    "unlockRoomId": "sunroom_garden",
+    "steps": [
+      { "id": "e2_step1", "descriptionKey": "onboarding.e2.step1", "requiredAction": "open_inventory" },
+      { "id": "e2_step2", "descriptionKey": "onboarding.e2.step2", "requiredAction": "use_reroll" },
+      { "id": "e2_step3", "descriptionKey": "onboarding.e2.step3", "requiredAction": "collect_daily_task_bonus" }
+    ]
+  },
+  {
+    "id": 3,
+    "nameKey": "episode.3",
+    "unlockRoomId": "kitchen",
+    "steps": [
+      { "id": "e3_step1", "descriptionKey": "onboarding.e3.step1", "requiredAction": "trigger_first_echo" },
+      { "id": "e3_step2", "descriptionKey": "onboarding.e3.step2", "requiredAction": "resolve_echo_choice" },
+      { "id": "e3_step3", "descriptionKey": "onboarding.e3.step3", "requiredAction": "read_letter" }
+    ]
+  }
+]
